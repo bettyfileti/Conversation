@@ -1,0 +1,34 @@
+/* Styles for "Conversation Circle" shader piece */
+
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  /* Canvas container takes full screen */
+  #canvas-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /* Main p5.js canvas */
+  canvas {
+    display: block;
+  }
