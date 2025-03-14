@@ -29,6 +29,34 @@ function preload() {
 }
 
 function setup() {
+
+// Check if user is on mobile
+let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+
+  if (isMobile) {
+    // Create a mobile notice overlay
+    let notice = document.createElement("div");
+    notice.style.position = "fixed";
+    notice.style.top = "5%";
+    notice.style.left = "5%";
+    notice.style.width = "80%";
+    notice.style.height = "80%";
+    notice.style.backgroundColor = "rgba(0,0,0,0.8)";
+    notice.style.color = "white";
+    notice.style.display = "flex";
+    notice.style.alignItems = "center";
+    notice.style.justifyContent = "center";
+    notice.style.zIndex = "1000";
+    notice.style.padding = "20px";
+    notice.style.textAlign = "center";
+    notice.style.fontFamily = "Alata";
+    notice.innerHTML =
+      "<p>Not *yet* set up for mobile.</br> Please try on a desktop device.</p>";
+    document.body.appendChild(notice);
+  }
+  
   // Shaders require WEBGL mode to work
   createCanvas(windowWidth, windowHeight, WEBGL);
   
